@@ -6,7 +6,7 @@ export default function RegisterPage(){
         <>
             <Header
                 heading="Register to create an account"
-                paragraph="Already have an account? "
+                paragraph="Or log into your account : "
                 linkName="Login"
                 linkUrl="/"
             />

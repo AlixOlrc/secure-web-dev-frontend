@@ -47,10 +47,9 @@ const registerFields=[
         labelFor:"confirmPassword",
         id:"confirmPassword",
         name:"confirmPassword",
-        type:"password",
         autoComplete:"confirmPassword",
         isRequired:true,
-        placeholder:"confirmPassword"
+        placeholder:"Confirm your password"
     }
 ]
 

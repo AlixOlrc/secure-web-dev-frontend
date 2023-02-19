@@ -5,9 +5,9 @@ export default function LoginPage(){
     return(
         <>
             <Header
-                logo="Welcome"
-                heading="Login to your account"
-                paragraph="Don't have an account yet? "
+                logo="Welcome on the app"
+                heading="Please log into your account"
+                paragraph="Or register right here : "
                 linkName="Register"
                 linkUrl="/register"
             />
