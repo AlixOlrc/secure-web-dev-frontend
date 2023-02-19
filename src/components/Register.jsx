@@ -35,7 +35,7 @@ export default function Register(){
             body: JSON.stringify({
                     username: registerState.username,
                     password: registerState.password,
-                    role:registerState.role,
+                    role: registerState.role,
             })
         }).then((response) => {
             if(response.ok){
