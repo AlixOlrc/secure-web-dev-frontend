@@ -1,25 +1,25 @@
 import { useState } from 'react';
-import { signupFields } from "../constants/formFields"
+import { registerFields } from "../constants/formFields"
 import FormAction from "./FormAction";
 import Input from "./Input";
 import {useNavigate} from 'react-router-dom';
 
-const fields=signupFields;
+const fields=registerFields;
 let fieldsState={};
 
 fields.forEach(field => fieldsState[field.id]='');
 
-export default function Signup(){
-    const [signupState,setSignupState]=useState(fieldsState);
+export default function Register(){
+    const [registerState,setRegisterState]=useState(fieldsState);
 
     const navigate = useNavigate();
 
-    const handleChange=(e)=>setSignupState({...signupState,[e.target.id]:e.target.value});
+    const handleChange=(e)=>setRegisterState({...registerState,[e.target.id]:e.target.value});
 
     const handleSubmit=(e)=>{
         e.preventDefault();
-        console.log(signupState);
-        if(signupState.password===signupState.confirmPassword){
+        console.log(registerState);
+        if(registerState.password===registerState.confirmPassword){
             createAccount();
         }else{
             alert("The password and the confirm password does not match")
@@ -33,9 +33,9 @@ export default function Signup(){
             redirect: 'follow',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                    username: signupState.username,
-                    password: signupState.password,
-                    role:signupState.role,
+                    username: registerState.username,
+                    password: registerState.password,
+                    role:registerState.role,
             })
         }).then((response) => {
             if(response.ok){
@@ -55,7 +55,7 @@ export default function Signup(){
                         <Input
                             key={field.id}
                             handleChange={handleChange}
-                            value={signupState[field.id]}
+                            value={registerState[field.id]}
                             labelText={field.labelText}
                             labelFor={field.labelFor}
                             id={field.id}
@@ -66,7 +66,7 @@ export default function Signup(){
                         />
                     )
                 }
-                <FormAction handleSubmit={handleSubmit} text="Signup" />
+                <FormAction handleSubmit={handleSubmit} text="Register" />
             </div>
         </form>
     )

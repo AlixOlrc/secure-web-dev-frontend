@@ -21,7 +21,7 @@ const loginFields=[
     }
 ]
 
-const signupFields=[
+const registerFields=[
     {
         labelText:"Username",
         labelFor:"username",
@@ -54,4 +54,4 @@ const signupFields=[
     }
 ]
 
-export {loginFields,signupFields}
+export {loginFields,registerFields}

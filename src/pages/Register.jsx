@@ -1,16 +1,16 @@
 import Header from "../components/Header";
-import Signup from "../components/Signup";
+import Register from "../components/Register";
 
-export default function SignupPage(){
+export default function RegisterPage(){
     return(
         <>
             <Header
-                heading="Signup to create an account"
+                heading="Register to create an account"
                 paragraph="Already have an account? "
                 linkName="Login"
                 linkUrl="/"
             />
-            <Signup/>
+            <Register/>
         </>
     )
 }
